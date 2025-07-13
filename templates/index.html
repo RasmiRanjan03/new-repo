@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='utility.css')}}">
+    <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+</head>
+<body>
+    <nav class="flex">
+        <div class="leftside flex ">
+          <img class='invert harm' src="{{ url_for('static', filename='image/hamburger.svg') }}" alt="" width="32px">
+            <img class="invert " src="{{ url_for('static', filename='image/spotify.svg') }}" alt="spotify">
+            <div class="Home gray flex"><img class="invert" src="{{ url_for('static', filename='image/home.svg') }}" width="50%"  alt="home">
+        </div>
+       <div class="search gray  flex" >
+        <img class="invert" src="{{ url_for('static', filename='image/search.svg') }}" width="25px" alt="search">
+        <input type="text" placeholder="What do you want to play ?">
+
+        <div class="ex flex center">
+            <img class="invert" src="{{ url_for('static', filename='image/brows.svg') }}" alt="brows" width="25px">
+        </div>
+    </div></div>
+        <div class="rightside flex ">
+            <div class="firstbox">
+                <ul class="flex center"><li><a href="">Premium</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Download</a></li>
+
+                </ul></div>
+                <div class="secondbox flex">
+                    <div class="flex center ex1">
+                        <div class="exx2 flex center"><img class="invert" src="{{ url_for('static', filename='image/download.svg') }}" alt="install" width="15px">
+                        <a   href="">install App</a></div>
+                        <div><a href="">Sign up</a></div>
+                    </div>
+                  
+                    <button class="login"><b>Log in</b></button>
+                </div>
+            
+ 
+        </div>
+    </nav>
+    <div class="container flex">
+        <div class="left redborder gray">
+                <div class="library redborder gray">
+                    <h3>Your Library</h3>
+                    <h4 margin = '2px'>Playlists</h4>
+                    <div class="songlist">
+                      <ul>
+                        
+                      </ul>
+                    </div>
+                    <footer class="flex">
+                            <div>
+                              <a href="https://www.spotify.com/in-en/legal/" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">Legal</span>
+                              </a>
+                            </div>
+                            <div>
+                              <a href="https://www.spotify.com/in-en/safetyandprivacy/" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">Safety &amp; Privacy Center</span>
+                              </a>
+                            </div>
+                            <div>
+                              <a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">Privacy Policy</span>
+                              </a>
+                            </div>
+                            <div>
+                              <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">Cookies</span>
+                              </a>
+                            </div>
+                            <div>
+                              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">About Ads</span>
+                              </a>
+                            </div>
+                            <div>
+                              <a href="https://www.spotify.com/in-en/accessibility/" id="" data-encore-id="textLink">
+                                <span data-encore-id="type">Accessibility</span>
+                              </a>
+                            </div>
+                    </footer>
+            </div>
+        </div>
+        <div class="right redborder gray">
+         <header> <h2>Trending Songs</h2></header>
+          <div class="cardholder">
+          </div></div>
+          <div class="musicplayer">
+           <div class="box">
+            <div class="songinfo">Song</div>
+           
+            <div class="playbutton">
+              <img id="previous" src="{{ url_for('static', filename='image/next-svgrepo-com.svg') }}" alt="">
+              <div id="play"><img src="{{ url_for('static', filename='image/play-button-svgrepo-com.svg') }}" alt="Play"></div>
+              <img id="next" src="{{ url_for('static', filename='image/next-svgrepo-com.svg') }}" alt="">
+
+            </div>
+            <div class="box2">
+            <div class="songtimmer">0:00 / 0:00</div>
+            <div class="volume">
+              <div class="range">
+                <input type="range" name="volume" id="">
+              </div>
+              <img class="invert volumeimg" src="{{ url_for('static', filename='image/volume.svg') }}" width="20px" alt="">
+            </div>
+          </div>
+          </div>
+             <div class="seekbar">
+                <div class="circle"></div>
+            </div>
+          </div>
+        
+
+    </div>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
