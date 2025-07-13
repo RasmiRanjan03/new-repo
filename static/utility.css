@@ -1,0 +1,38 @@
+.flex{
+    display: flex;
+}
+.redborder{
+    
+    border-radius: 5px;
+}
+body{
+    background-color: black;
+}
+.invert{
+    filter: invert(1);
+}
+.gray{
+    background-color: #1f1f1f;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.text:hover{
+    text-decoration: underline;
+
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent thumb */
+    border-radius: 10px;
+    border: 2px solid transparent; /* creates padding around thumb */
+    background-clip: content-box;
+}
